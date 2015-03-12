@@ -11,10 +11,7 @@ class MsgType:
     def __init__(self):
         pass
 
-    xPL_ANY = 0
-    xPL_COMMAND = 1
-    xPL_STATUS = 2
-    xPL_TRIGGER = 3
+    xPL_ANY, xPL_COMMAND, xPL_STATUS, xPL_TRIGGER = range(3)
 
 
 class Source(object):
