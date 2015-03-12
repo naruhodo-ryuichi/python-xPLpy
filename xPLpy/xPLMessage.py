@@ -8,6 +8,9 @@ import logging
 
 
 class MsgType:
+    """
+    Container for recognized message types
+    """
     def __init__(self):
         pass
 
@@ -15,6 +18,10 @@ class MsgType:
 
 
 class Source(object):
+    """
+    A string with format vendor-device.instance, identifying an unique bus element. Also accepts wildcard * (default configuration)
+    """
+
     def __init__(self, src=None):
         if src:
             self.vendor, self.device, self.instance = src.replace("-", ".").split(".")
@@ -26,6 +33,9 @@ class Source(object):
 
 
 class Target(object):
+    """
+    A string with format vendor-device.instance, identifying an unique bus element. Also accepts wildcard * (default configuration)
+    """
     def __init__(self, tgt=None):
         if tgt:
             self.vendor, self.device, self.instance = tgt.replace("-", ".").split(".")
@@ -37,6 +47,9 @@ class Target(object):
 
 
 class Schema:
+    """
+    A string with format class.type
+    """
     def __init__(self, sch):
         if sch:
             self.sclass, self.stype = sch.split(".")
